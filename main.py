@@ -18,7 +18,7 @@ def fetchResults(query):
         params = {
             "engine": "google_scholar",
             "q": query,
-            "api_key": "7d3fd555b201b405e741d8cd7ba50c6fb865294d7835b5186ec235452699dd6b",
+            "api_key": "",
             "start": i * 20,
             "num": 20,
         }
@@ -52,7 +52,7 @@ def fetchResults(query):
 
 
 def GPT_Score(query, snippet):
-    openai.api_key = "sk-proj-rz41fRHeworEqjeCCrvHT3BlbkFJCBSn8gHWikmJ6ykRAs3f"
+    openai.api_key = ""
     response = openai.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
@@ -163,7 +163,7 @@ def pdfScrape(pdf_url):
 def GPT_Summarizing(extractedText):
     summarizedText = []
 
-    openai.api_key = "sk-proj-rz41fRHeworEqjeCCrvHT3BlbkFJCBSn8gHWikmJ6ykRAs3f"
+    openai.api_key = ""
 
     for i in range(len(extractedText)):
         response = openai.chat.completions.create(
